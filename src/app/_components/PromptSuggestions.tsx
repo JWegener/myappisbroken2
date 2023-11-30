@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface PromptComponentProps {
   promptsAndSuggestions: {
@@ -7,8 +7,10 @@ interface PromptComponentProps {
   }[];
 }
 
-const PromptComponent = ({ promptsAndSuggestions }) => {
-  const [answers, setAnswers] = useState(Array(promptsAndSuggestions.length).fill(""));
+const PromptComponent = ({ promptsAndSuggestions }: PromptComponentProps) => {
+  const [answers, setAnswers] = useState(
+    Array(promptsAndSuggestions.length).fill(""),
+  );
 
   const handleSuggestionClick = (index, suggestion) => {
     let newAnswers = [...answers];
@@ -21,7 +23,7 @@ const PromptComponent = ({ promptsAndSuggestions }) => {
       {promptsAndSuggestions.map((item, index) => (
         <div key={index} className="space-y-2">
           <textarea
-            className="w-full p-2 border border-gray-300 rounded"
+            className="w-full rounded border border-gray-300 p-2"
             placeholder={item.prompt}
             value={answers[index]}
             onChange={(e) => {
@@ -37,7 +39,8 @@ const PromptComponent = ({ promptsAndSuggestions }) => {
                 className="mr-2 cursor-pointer hover:text-gray-700"
                 onClick={() => handleSuggestionClick(index, suggestion)}
               >
-                {suggestion}{idx < item.suggestions.length - 1 ? ', ' : ''}
+                {suggestion}
+                {idx < item.suggestions.length - 1 ? ", " : ""}
               </span>
             ))}
           </div>
