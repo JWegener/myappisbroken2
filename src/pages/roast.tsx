@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState, useRef } from "react";
-import PromptSuggestions from "~/app/_components/PromptSuggestions";
+import PromptSuggestions from "src/app/_components/PromptSuggestions.jsx";
 
 export default function Home() {
   const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
