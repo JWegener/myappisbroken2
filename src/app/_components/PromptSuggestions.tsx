@@ -1,42 +1,44 @@
 import React, { useState } from "react";
 
+interface Prompt {
+  prompt: string;
+  suggestions: string[];
+}
+
 interface PromptComponentProps {
-  promptsAndSuggestions: {
-    prompt: string;
-    suggestions: string[];
-  }[];
+  promptsAndSuggestions: Prompt[];
 }
 
 const PromptComponent = ({ promptsAndSuggestions }: PromptComponentProps) => {
-  const [answers, setAnswers] = useState(
+  const [answers, setAnswers] = useState<string[]>(
     Array(promptsAndSuggestions.length).fill(""),
   );
 
-  const handleSuggestionClick = (index, suggestion) => {
-    let newAnswers = [...answers];
+  const handleSuggestionClick = (index: number, suggestion: string) => {
+    const newAnswers = [...answers];
     newAnswers[index] = suggestion;
     setAnswers(newAnswers);
   };
 
   return (
     <div className="space-y-4">
-      {promptsAndSuggestions.map((item, index) => (
-        <div key={index} className="space-y-2">
+      {promptsAndSuggestions.map((item: Prompt, index: number) => (
+        <div key={index} className="space-y-0">
           <textarea
-            className="w-full rounded border border-gray-300 p-2"
+            className="w-full rounded-xl border border-gray-300 p-2"
             placeholder={item.prompt}
             value={answers[index]}
             onChange={(e) => {
-              let newAnswers = [...answers];
+              const newAnswers = [...answers];
               newAnswers[index] = e.target.value;
               setAnswers(newAnswers);
             }}
           />
-          <div className="text-xs text-gray-500">
+          <div className="text-xs text-blue-300">
             {item.suggestions.map((suggestion, idx) => (
               <span
                 key={idx}
-                className="mr-2 cursor-pointer hover:text-gray-700"
+                className="cursor-pointer hover:text-blue-700"
                 onClick={() => handleSuggestionClick(index, suggestion)}
               >
                 {suggestion}

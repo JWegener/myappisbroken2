@@ -3,15 +3,6 @@ import { useState, useRef } from "react";
 import PromptSuggestions from "src/app/_components/PromptSuggestions";
 
 export default function Home() {
-  const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [selectedGender, setSelectedGender] = useState("woman");
-  const [displayedText, setDisplayedText] = useState("");
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    return 0;
-  };
-
   const theirName = "Alice"; // Replace 'Alice' with the desired name
 
   const promptsAndSuggestions = [
