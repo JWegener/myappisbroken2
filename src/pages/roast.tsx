@@ -8,7 +8,7 @@ export default function Home() {
   const promptsAndSuggestions = [
     {
       prompt: `${theirName} is surprisingly bad at…`,
-      suggestions: ["cooking", "dancing", "saying I'm sorry"],
+      suggestions: ["cooking", "dancing", "saying 'i'm sorry'"],
     },
     {
       prompt: `${theirName}’s most eccentric hobby…`,
@@ -119,10 +119,9 @@ export default function Home() {
               Roast <span className="text-[hsl(280,100%,70%)]">Jonathan</span>{" "}
               with questions
             </h2>
-            <h3>Answer as many as you like</h3>
+            <h3>Answer as many as you like...</h3>
 
             <div>
-              <h1>Welcome to the Page</h1>
               <PromptSuggestions
                 promptsAndSuggestions={promptsAndSuggestions}
               />
