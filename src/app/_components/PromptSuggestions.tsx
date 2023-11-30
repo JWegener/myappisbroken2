@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 
+interface PromptComponentProps {
+  promptsAndSuggestions: {
+    prompt: string;
+    suggestions: string[];
+  }[];
+}
+
 const PromptComponent = ({ promptsAndSuggestions }) => {
   const [answers, setAnswers] = useState(Array(promptsAndSuggestions.length).fill(""));
 
