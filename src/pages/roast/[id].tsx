@@ -128,7 +128,7 @@ export default function Home() {
             </h2>
 
             <h2 className="mx-auto rotate-[2deg] pb-5  text-center text-3xl font-bold tracking-tight  text-black ">
-              Jonathan invites you
+              {theirName} invites you
               <br />
               <span className=" ml-1 inline-block transform rounded-md bg-black px-2 py-1 text-[hsl(100,100%,100%)] drop-shadow-lg">
                 to <span className="text-[hsl(280,100%,70%)]">roast</span> them
