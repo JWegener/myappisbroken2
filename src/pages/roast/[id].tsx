@@ -121,13 +121,13 @@ export default function Home() {
       <main className="flex justify-center bg-slate-100">
         <div className="container flex w-full max-w-screen-xl flex-col items-center justify-center px-4 py-12 md:w-full">
           <div className="grid items-start">
-            <h2 className="rotate-[-2deg] pb-12 text-center text-4xl font-bold tracking-tight text-black">
+            <h2 className="rotate-[-2deg] pb-10 text-center text-4xl font-bold tracking-tight text-black">
               <span className="  rounded-md bg-black px-2 py-1 text-[hsl(280,100%,70%)] shadow-lg">
                 🔥AI Roast Generator🔥
               </span>
             </h2>
 
-            <h2 className="mx-auto rotate-[2deg] pb-5  text-center text-3xl font-bold tracking-tight  text-black ">
+            <h2 className="mx-auto rotate-[-2deg] pb-5  text-center text-3xl font-bold tracking-tight  text-black ">
               {theirName} invites you
               <br />
               <span className=" ml-1 inline-block transform rounded-md bg-black px-2 py-1 text-[hsl(100,100%,100%)] drop-shadow-lg">

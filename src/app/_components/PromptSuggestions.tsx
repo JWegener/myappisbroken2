@@ -26,7 +26,9 @@ const PromptComponent = ({ promptsAndSuggestions }: PromptComponentProps) => {
         {promptsAndSuggestions.map((item: Prompt, index: number) => (
           <div key={index} className="">
             <textarea
-              className="w-full resize-none rounded-xl border border-slate-300 p-4 text-sm"
+              className="w-full resize-none rounded-xl border p-4 text-sm 
+hover:outline-none hover:ring-4 hover:ring-purple-400 hover:ring-opacity-75 
+focus:outline-none focus:ring-4 focus:ring-purple-400 focus:ring-opacity-75"
               placeholder={item.prompt}
               value={answers[index]}
               onChange={(e) => {
@@ -41,7 +43,7 @@ const PromptComponent = ({ promptsAndSuggestions }: PromptComponentProps) => {
               {item.suggestions.map((suggestion, idx) => (
                 <span
                   key={idx}
-                  className="cursor-pointer hover:text-blue-700"
+                  className="cursor-pointer hover:text-purple-700"
                   onClick={() => handleSuggestionClick(index, suggestion)}
                 >
                   {suggestion}
