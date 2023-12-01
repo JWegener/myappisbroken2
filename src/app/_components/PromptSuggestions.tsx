@@ -22,7 +22,7 @@ const PromptComponent = ({ promptsAndSuggestions }: PromptComponentProps) => {
 
   return (
     <>
-      <form className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+      <form className="border-1 xs:grid-cols-1 grid grid-cols-1 grid-cols-2 gap-10 rounded-lg md:grid-cols-3">
         {promptsAndSuggestions.map((item: Prompt, index: number) => (
           <div key={index} className="">
             <textarea

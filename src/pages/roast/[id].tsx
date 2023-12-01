@@ -60,11 +60,11 @@ export default function Home() {
       suggestions: ["laugh at themselves", "get back up"],
     },
     {
-      prompt: `One unique quirk is ${theirName} `,
-      suggestions: ["chew with their mouth open"],
+      prompt: `One unique quirk is ${theirName}...`,
+      suggestions: ["chews with their mouth open"],
     },
     {
-      prompt: `Weirdly obsessed with the song/artist`,
+      prompt: `Weirdly obsessed with the song/artist...`,
       suggestions: ["Britney", "Justin Timberlake"],
     },
     {
@@ -76,7 +76,7 @@ export default function Home() {
       suggestions: ["plants", "tacos"],
     },
     {
-      prompt: `A hill ${theirName} would die on…`,
+      prompt: `A hill they would die on…`,
       suggestions: ["peanuts are legumes!"],
     },
     {
@@ -88,7 +88,7 @@ export default function Home() {
       suggestions: ["fart loudly", "fall asleep on the couch"],
     },
     {
-      prompt: `An annoying thing ${theirName} does is..`,
+      prompt: `An annoying thing ${theirName} does is...`,
       suggestions: ["snore, run late, finish the toilet paper"],
     },
     {
@@ -96,7 +96,7 @@ export default function Home() {
       suggestions: ["Projects", "recipes", "art", "sentences", "sex"],
     },
     {
-      prompt: `${theirName} doesn't get...`,
+      prompt: `${theirName} doesn't "get"...`,
       suggestions: ["Tiktok", "the phrase 'slay'"],
     },
     {
@@ -105,7 +105,7 @@ export default function Home() {
     },
 
     {
-      prompt: `Say anything! What else do you wish to share about ${theirName}?`,
+      prompt: `(The say anything box! What else about ${theirName}?)`,
       suggestions: ["their eyes are different colors!"],
     },
   ];
